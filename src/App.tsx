@@ -10,11 +10,11 @@ type Item = {
 };
 
 const data: Item[] = [
-  { id: 1, title: 'Объект 1', description: 'Описание объекта 1' },
-  { id: 2, title: 'Объект 2', description: 'Описание объекта 2' },
-  { id: 3, title: 'Объект 3', description: 'Описание объекта 3' },
-  { id: 4, title: 'Объект 4', description: 'Описание объекта 4' },
-  { id: 5, title: 'Объект 5', description: 'Описание объекта 5' },
+  { id: 1, title: 'Block #400442', description: '123441234412344123441234412344123441234412344123441234412344123441234412344' },
+  { id: 2, title: 'Block #400442', description: '123441234412344123441234412344123441234412344123441234412344123441234412344' },
+  { id: 3, title: 'Block #400442', description: '123441234412344123441234412344123441234412344123441234412344123441234412344' },
+  { id: 4, title: 'Block #400442', description: '123441234412344123441234412344123441234412344123441234412344123441234412344' },
+  { id: 5, title: 'Block #400442', description: '123441234412344123441234412344123441234412344123441234412344123441234412344' },
 ];
 
 function App() {
@@ -86,6 +86,7 @@ function App() {
       <h1>Last blocks</h1>
       <List items={data} onItemClick={openModal} />
       {selectedItem && <Modal item={selectedItem} onClose={closeModal} />}
+
     </div>
   );
 }
