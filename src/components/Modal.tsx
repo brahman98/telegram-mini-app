@@ -28,7 +28,7 @@ const Modal = ({ item, onClose }: ModalProps) => {
       <div
         style={{
           backgroundColor: "#1a2027",
-          padding: "20px",
+          padding: "20px 20px 40px",
           borderRadius: "8px",
           width: "100%",
           position: "relative",
@@ -64,7 +64,7 @@ const Modal = ({ item, onClose }: ModalProps) => {
             <p className="modal__right_p">05.12.2024, 16:26:46</p>
           </li>
         </ul>
-        <button className="button mb20" onClick={onClose}>
+        <button className="button margin-bottom-0" onClick={onClose}>
           OK
         </button>
         <div className="closer" onClick={onClose}>
