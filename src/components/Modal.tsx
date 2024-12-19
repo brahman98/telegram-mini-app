@@ -22,7 +22,7 @@ const Modal = ({ item, onClose }: ModalProps) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "end",
-        zIndex: 11
+        zIndex: 11,
       }}
     >
       <div
