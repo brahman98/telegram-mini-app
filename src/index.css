@@ -21,6 +21,7 @@ body {
   padding: 0 16px;
   overflow-y: auto;
   height: 100vh;
+  background-color: #1a2027;
 }
 
 h1 {
