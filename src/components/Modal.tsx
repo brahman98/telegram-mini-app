@@ -22,6 +22,7 @@ const Modal = ({ item, onClose }: ModalProps) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "end",
+        zIndex: 11
       }}
     >
       <div
@@ -31,6 +32,7 @@ const Modal = ({ item, onClose }: ModalProps) => {
           borderRadius: "8px",
           width: "100%",
           position: "relative",
+          zIndex: 15,
         }}
       >
         <h2 className="margin-bottom-40">{item.title}</h2>
@@ -62,7 +64,7 @@ const Modal = ({ item, onClose }: ModalProps) => {
             <p className="modal__right_p">05.12.2024, 16:26:46</p>
           </li>
         </ul>
-        <button className="button" onClick={onClose}>
+        <button className="button mb20" onClick={onClose}>
           OK
         </button>
         <div className="closer" onClick={onClose}>

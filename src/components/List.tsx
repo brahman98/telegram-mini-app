@@ -16,7 +16,12 @@ const List = ({ items, onItemClick }: ListProps) => {
     <ul className={styles.list}>
       {items.map((item) => (
         <li key={item.id} className={styles.item} onClick={() => onItemClick(item)}>
-          {item.title}
+          {/* {item.title} */}
+          <div className={styles.item__left}>
+            <p>#12344</p>
+            <p>00:25 by Kate</p>
+          </div>
+          <div className={styles.item__right}>My reward: 0</div>
         </li>
       ))}
     </ul>

@@ -33,10 +33,6 @@ p {
   font-size: 15px;
 }
 
-.margin-bottom-40 {
-  margin-bottom: 40px;
-}
-
 .energy {
   background-color: #222a32;
   color: #8694A1;
@@ -121,6 +117,7 @@ p {
   line-height: 20px;
   border: none;
   margin-bottom: 48px;
+  cursor: pointer;
 }
 
 
@@ -194,4 +191,55 @@ p {
 
 .cross-line:last-child {
   transform: rotate(-45deg);
+}
+
+/* BOTTOM NAVIGATION */
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #13171c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 25%;
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.nav-item span {
+  font-size: 11px;
+  color: #787D81;
+}
+
+
+
+/* MODIFICATION */
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
 }
