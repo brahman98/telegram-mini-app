@@ -45,7 +45,7 @@
   color: #a6b8cc;
   padding: 2px 8px;
   margin-bottom: 8px; */
-  @apply text-xs bg-back_4 rounded text-text_color_3 px-2 py-0.5 mb-2;
+  @apply text-xs bg-back_4 rounded text-text_color_3 px-2 py-0.5 mb-0.5;
 }
 
 .button {
