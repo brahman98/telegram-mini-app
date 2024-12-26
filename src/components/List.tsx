@@ -22,7 +22,6 @@ const List = ({ items, onItemClick }: ListProps) => {
             className={styles.item}
             onClick={() => onItemClick(item)}
           >
-            {/* {item.title} */}
             <div className={styles.item__left}>
               <p>#12344</p>
               <p>00:25 by Kate</p>

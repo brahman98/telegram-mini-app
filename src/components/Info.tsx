@@ -1,52 +1,56 @@
+import styles from "./Info.module.css";
+
 const Info = () => {
   return (
     <>
       <h1>Information</h1>
-      <section className="info">
-        <div className="info__part">
-          <div className="info__part_key">
-            <p className="margin-bottom">Block</p>
+      <section className={styles.info}>
+        <div className={styles.info__part}>
+          <div className={styles.info__part_key}>
+            <p className={styles.margin_bottom}>Block</p>
             <p>Reward</p>
           </div>
-          <div className="info__part_value">
-            <p className="margin-bottom">12345</p>
+          <div className={styles.info__part_value}>
+            <p className={styles.margin_bottom}>12345</p>
             <p>624</p>
           </div>
         </div>
-        <div className="info__part">
-          <div className="info__part_key2">
-            <p className="margin-bottom">Complexity</p>
+        <div className={styles.info__part}>
+          <div className={styles.info__part_key2}>
+            <p className={styles.margin_bottom}>Complexity</p>
             <p>Online</p>
           </div>
-          <div className="info__part_value">
-            <p className="margin-bottom">1.9K</p>
+          <div className={styles.info__part_value}>
+            <p className={styles.margin_bottom}>1.9K</p>
             <p>10K</p>
           </div>
         </div>
       </section>
-      <section className="info">
-        <div className="info__part">
-          <div className="info__part_key">
-            <p className="margin-bottom">Status</p>
+      <section className={styles.info}>
+        <div className={styles.info__part}>
+          <div className={styles.info__part_key}>
+            <p className={styles.margin_bottom}>Status</p>
             <p>Hashes</p>
           </div>
-          <div className="info__part_value">
-            <p className="margin-bottom special_p">Waiting</p>
+          <div className={styles.info__part_value}>
+            <p className={`${styles.margin_bottom} ${styles.special_p}`}>
+              Waiting
+            </p>
             <p>0</p>
           </div>
         </div>
-        <div className="info__part">
-          <div className="info__part_key2">
-            <p className="margin-bottom">Shares</p>
+        <div className={styles.info__part}>
+          <div className={styles.info__part_key2}>
+            <p className={styles.margin_bottom}>Shares</p>
             <p>Income</p>
           </div>
-          <div className="info__part_value">
-            <p className="margin-bottom">0</p>
+          <div className={styles.info__part_value}>
+            <p className={styles.margin_bottom}>0</p>
             <p>0</p>
           </div>
         </div>
       </section>
-      <button className="button">Start mining</button>
+      <button className={styles.button}>Start mining</button>
     </>
   );
 };

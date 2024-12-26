@@ -1,0 +1,33 @@
+/* ENERGY */
+
+.energy {
+  /* background-color: #222a32;
+  color: #8694a1;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 28px;
+  margin-bottom: 40px; */
+  @apply bg-back_2 text-gray-400 p-3 rounded-xl mt-7 mb-10;
+}
+
+.energy__text {
+  @apply flex justify-between;
+}
+
+.energy__range {
+  /* height: 20px;
+  width: 100%;
+  background-color: #2d353d;
+  border-radius: 5px;
+  margin-top: 8px; */
+  @apply h-5 w-full bg-back_3 rounded-md mt-2;
+}
+
+.energy__range_green {
+  /* background-color: #3ccf95;
+  height: 100%;
+  width: 88%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; */
+  @apply bg-range h-full w-[88%] rounded-l-md;
+}

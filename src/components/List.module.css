@@ -1,5 +1,5 @@
 .list {
-    list-style: none;
+    /* list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
@@ -8,11 +8,12 @@
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 120px;
-    background-color: #1a2027;
-  }
-  
-  .item {
-    background-color: #222a32;
+    background-color: #1a2027; */
+    @apply list-none p-0 m-0 flex flex-col h-80 rounded-xl overflow-hidden mb-28;
+}
+
+.item {
+    /* background-color: #222a32;
     height: 64px;
     padding: 12px 16px;
     cursor: pointer;
@@ -20,28 +21,30 @@
     padding: 12px 16px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-  
-  .item:first-child, .item:focus, .item:hover {
-    background-color: #2d353d;
-  }
+    align-items: center; */
+    @apply bg-back_2 h-16 px-4 cursor-pointer transition-colors duration-300 flex justify-between items-center;
+}
 
-  .item__left p:first-child {
-    color: #fff;
-    line-height: 20px;
-  }
+.item:first-child,
+.item:focus,
+.item:hover {
+    @apply bg-back_3;
+}
 
-  .item__left p:last-child {
-    color: #8694A1;
-    line-height: 20px;
-  }
-  
-  .item__right {
-    color: #fff;
+.item__left p:first-child {
+    @apply text-white leading-5;
+}
+
+.item__left p:last-child {
+    @apply text-gray-400 leading-5;
+}
+
+.item__right {
+    /* color: #fff;
     font-size: 12px;
     line-height: 16px;
     padding: 2px 8px;
     background-color: #248bdb;
-    border-radius: 4px;
-  }
+    border-radius: 4px; */
+    @apply text-white text-xs leading-4 px-2 py-0.5 bg-button rounded;
+}

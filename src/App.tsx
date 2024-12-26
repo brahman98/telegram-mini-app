@@ -3,7 +3,7 @@ import List from "./components/List";
 import Modal from "./components/Modal";
 import Energy from "./components/Energy";
 import Info from "./components/Info";
-import Navigation from "./components/Navigation";
+import Nav from "./components/Nav";
 
 type Item = {
   id: number;
@@ -56,7 +56,7 @@ function App() {
       <Info />
       <List items={data} onItemClick={openModal} />
       {selectedItem && <Modal item={selectedItem} onClose={closeModal} />}
-      <Navigation />
+      <Nav />
     </div>
   );
 }
