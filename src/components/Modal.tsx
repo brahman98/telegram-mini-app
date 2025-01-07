@@ -1,4 +1,6 @@
 import styles from "./Modal.module.css";
+import { observer } from "mobx-react-lite";
+import appStore from "../stores/appStore";
 
 type Item = {
   id: number;
@@ -11,7 +13,10 @@ type ModalProps = {
   onClose: () => void;
 };
 
-const Modal = ({ item, onClose }: ModalProps) => {
+const Modal = observer(({ item, onClose }: ModalProps) => {
+  const { miner, minersReward, totalNumberUsers, shareReward, myReward, date } = appStore;
+
+
   return (
     <div className={styles.modal}>
       <div className={styles.in_modal}>
@@ -21,27 +26,27 @@ const Modal = ({ item, onClose }: ModalProps) => {
         <ul className={styles.modal__ul}>
           <li className={styles.modal__li}>
             <p className={styles.modal__left_p}>Miner</p>
-            <p className={styles.modal__right_p}>B</p>
+            <p className={styles.modal__right_p}>{miner}</p>
           </li>
           <li className={styles.modal__li}>
             <p className={styles.modal__left_p}>Miner’s reward</p>
-            <p className={styles.modal__right_p}>248.1</p>
+            <p className={styles.modal__right_p}>{minersReward}</p>
           </li>
           <li className={styles.modal__li}>
             <p className={styles.modal__left_p}>Total number of&nbsp;users</p>
-            <p className={styles.modal__right_p}>1785</p>
+            <p className={styles.modal__right_p}>{totalNumberUsers}</p>
           </li>
           <li className={styles.modal__li}>
             <p className={styles.modal__left_p}>Share reward</p>
-            <p className={styles.modal__right_p}>578.9</p>
+            <p className={styles.modal__right_p}>{shareReward}</p>
           </li>
           <li className={styles.modal__li}>
             <p className={styles.modal__left_p}>My reward</p>
-            <p className={styles.modal__right_p}>0</p>
+            <p className={styles.modal__right_p}>{myReward}</p>
           </li>
           <li className={styles.modal__li}>
             <p className={styles.modal__left_p}>Date</p>
-            <p className={styles.modal__right_p}>05.12.2024, 16:26:46</p>
+            <p className={styles.modal__right_p}>{date}</p>
           </li>
         </ul>
         <button
@@ -57,6 +62,6 @@ const Modal = ({ item, onClose }: ModalProps) => {
       </div>
     </div>
   );
-};
+});
 
 export default Modal;

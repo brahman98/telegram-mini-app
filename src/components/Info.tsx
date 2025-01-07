@@ -1,6 +1,11 @@
 import styles from "./Info.module.css";
+import { observer } from "mobx-react-lite";
+import infoStore from "../stores/InfoStore";
 
-const Info = () => {
+const Info = observer(() => {
+  const { block, reward, complexity, online } = infoStore;
+  const { status, hashes, shares, income, toggleMining } = infoStore;
+
   return (
     <>
       <h1>Information</h1>
@@ -11,8 +16,8 @@ const Info = () => {
             <p>Reward</p>
           </div>
           <div className={styles.info__part_value}>
-            <p className={styles.margin_bottom}>12345</p>
-            <p>624</p>
+            <p className={styles.margin_bottom}>{block}</p>
+            <p>{reward}</p>
           </div>
         </div>
         <div className={styles.info__part}>
@@ -21,8 +26,8 @@ const Info = () => {
             <p>Online</p>
           </div>
           <div className={styles.info__part_value}>
-            <p className={styles.margin_bottom}>1.9K</p>
-            <p>10K</p>
+            <p className={styles.margin_bottom}>{complexity}K</p>
+            <p>{online}K</p>
           </div>
         </div>
       </section>
@@ -34,9 +39,9 @@ const Info = () => {
           </div>
           <div className={styles.info__part_value}>
             <p className={`${styles.margin_bottom} ${styles.special_p}`}>
-              Waiting
+              {status}
             </p>
-            <p>0</p>
+            <p>{hashes}</p>
           </div>
         </div>
         <div className={styles.info__part}>
@@ -45,14 +50,16 @@ const Info = () => {
             <p>Income</p>
           </div>
           <div className={styles.info__part_value}>
-            <p className={styles.margin_bottom}>0</p>
-            <p>0</p>
+            <p className={styles.margin_bottom}>{shares}</p>
+            <p>{income}</p>
           </div>
         </div>
       </section>
-      <button className={styles.button}>Start mining</button>
+      <button className={styles.button} onClick={() => toggleMining()}>
+        {status === "Process" ? "Stop Mining" : "Start Mining"}
+      </button>
     </>
   );
-};
+});
 
 export default Info;
