@@ -1,30 +1,10 @@
 /* BOTTOM NAVIGATION */
 
 .bottom_navigation {
-    /* position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #13171c;
-    display: flex;
-    justify-content: space-around;
-    align-items: start;
-    z-index: 10;
-    padding-top: 8px;
-    padding-bottom: 32px; */
     @apply fixed bottom-0 left-0 w-full bg-back_nav flex justify-around items-start z-10 pt-2 pb-8;
 }
 
 .nav_item {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    max-width: 25%;
-    background: none;
-    border: none;
-    cursor: pointer; */
     @apply flex flex-col items-center justify-center flex-1 max-w-[25%] bg-none border-none cursor-pointer;
 }
 
@@ -33,8 +13,6 @@
 }
 
 .nav_item span {
-    /* font-size: 11px;
-    color: #787D81; */
     @apply text-[11px] text-gray-500;
 }
 
