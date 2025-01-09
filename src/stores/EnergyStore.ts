@@ -9,6 +9,9 @@ class EnergyStore {
   }
 
   increaseXP = (amount: number) => {
+    if (this.currentXP >= 990) {
+      throw new Error("Не получилось увеличить Energy!");
+    }
     this.currentXP = Math.min(this.currentXP + amount, this.maxXP);
   };
 }
