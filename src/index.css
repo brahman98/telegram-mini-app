@@ -50,3 +50,7 @@ h2 {
 p {
   font-size: 15px;
 }
+
+.suspense {
+  @apply fixed -translate-x-2/4 -translate-y-2/4 bg-[rgba(0,0,0,0.8)] text-white text-lg text-center z-[1000] p-5 rounded-lg left-2/4 top-2/4;
+}
