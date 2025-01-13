@@ -20,7 +20,7 @@ const App = observer(() => {
         <Suspense
           fallback={
             <div className="suspense">
-              Loading block`s info...
+              Loading...
             </div>
           }
         >
