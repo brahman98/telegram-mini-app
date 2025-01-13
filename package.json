@@ -16,7 +16,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^5.0.0",
-    "sass": "^1.83.0"
+    "sass": "^1.83.0",
+    "vite-plugin-pwa": "^0.21.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
